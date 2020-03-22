@@ -1,0 +1,37 @@
+/**
+ * 
+ */
+package aPlusb;
+
+import java.io.*;
+import java.util.*;
+
+/**
+ *
+ * @author Andrés Martínez
+ */
+public class Main {
+
+    static BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    static PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+    static StringTokenizer sc;
+    
+    public static void main(String[] args) throws IOException{
+        
+    	String t, s;
+    	int i, j;
+    	
+    	while((s = bf.readLine()) != null) {
+    		 
+    		t = bf.readLine();
+    		
+	    	for(i = 0, j = 0; i < t.length(); ++i) {
+	    		if(j == s.length()-1) break;
+	    		if((t.charAt(i)+"").equalsIgnoreCase(s.charAt(j)+"")) j++;
+	    	}
+	    	System.out.println(j == s.length() ? "Yes" : "No");
+//	        pw.println(j == s.length() ? "Yes" : "No");
+    	}
+        pw.close();
+    }
+}

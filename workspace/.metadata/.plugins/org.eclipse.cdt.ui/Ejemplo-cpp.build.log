@@ -1,0 +1,9 @@
+18:27:02 **** Incremental Build of configuration Release for project Ejemplo-cpp ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:\maraton\CodeBlocks\MinGW\bin;C:/maraton/Java/jre1.8.0_172/bin/server;C:/maraton/Java/jre1.8.0_172/bin;C:/maraton/Java/jre1.8.0_172/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Users\GonzaloRodriguezCarr\AppData\Local\Microsoft\WindowsApps;;C:\maraton\eclipse-CDT]
+
+18:27:02 Build Finished (took 230ms)
+

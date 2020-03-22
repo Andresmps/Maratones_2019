@@ -1,0 +1,61 @@
+/**
+ * 
+ */
+package pieceFactory;
+
+import java.io.*;
+import java.util.*;
+
+/**
+ * @author Andres Martinez
+ *
+ */
+public class PieceFactory {
+
+	static BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+	static PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+	static StringTokenizer sc;
+	static Hashtable<String, Integer> pieces = new Hashtable<>();
+	 
+	public static void main(String[] args) throws IOException{
+		
+		int N = Integer.valueOf(bf.readLine()), value;
+		String compoundMsg = "", s, key, Fkey;
+		
+		for(int i = 0; i < N; ++i) {
+			sc = new StringTokenizer(bf.readLine());
+			pieces.put(sc.nextToken(), Integer.valueOf(sc.nextToken()));
+			
+		}
+	  
+		while((s = bf.readLine()) != null) {
+			System.out.println(pieces);
+			if(s.equals("0")) break; 
+			sc = new StringTokenizer(s);
+			key = sc.nextToken();
+			Fkey = sc.nextToken();
+			value = Integer.valueOf(sc.nextToken());
+			
+			if(pieces.containsKey(key)) {
+				pieces.replace(key, pieces.get(key)+(pieces.get(Fkey)*value)); 
+			}else {
+				System.out.println(Fkey);
+				compoundMsg += key+" ";
+				pieces.put(key, pieces.get(Fkey)*value);
+				
+			}
+		}
+		
+		sc = new StringTokenizer(compoundMsg);
+		
+		while(sc.hasMoreTokens()) {
+			key = sc.nextToken();
+			pw.println(key+" "+pieces.get(key));
+		}
+		
+		
+		pw.close();
+	}
+	
+	
+}

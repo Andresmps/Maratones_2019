@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package aPlusb;
+
+import java.io.*;
+import java.util.*;
+
+/**
+ *
+ * @author Andrés Martínez
+ */
+public class Main {
+
+    static BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    static PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+    static StringTokenizer sc;
+    
+    public static void main(String[] args) throws IOException{
+        
+    	
+    	int t, n, sum;
+    	String l;
+    	
+    	t = Integer.valueOf(bf.readLine().trim());
+//    	l = bf.readLine();
+    	while(t-- != 0) {
+    		
+    		sum = 0;
+    		n = Integer.valueOf(bf.readLine().trim());
+    		
+    		for(int i = 0; i < n; ++i) {
+    			sum += Integer.valueOf(bf.readLine().trim());
+    		}
+    	    pw.println(sum % n == 0 ? "YES": "NO");
+//    	    l = bf.readLine();
+    	}
+        pw.close();
+    }
+}

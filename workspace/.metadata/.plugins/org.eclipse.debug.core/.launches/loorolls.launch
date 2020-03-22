@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/roadToMoskow(Fifth contest)/src/looRolls/loorolls.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="looRolls.loorolls"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="roadToMoskow(Fifth contest)"/>
+</launchConfiguration>

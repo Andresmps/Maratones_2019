@@ -1,0 +1,51 @@
+/**
+ * 
+ */
+package aPlusb;
+
+import java.io.*;
+import java.util.*;
+
+/**
+ *
+ * @author Andrés Martínez
+ */
+public class Main {
+
+    static BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    static PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+    static StringTokenizer sc;
+    
+    public static void main(String[] args) throws IOException{
+        
+        int[] a = new int[4];
+        boolean flag = false;
+        sc = new StringTokenizer(bf.readLine());
+        
+        a[0] = Integer.valueOf(sc.nextToken());
+        a[1] = Integer.valueOf(sc.nextToken());
+        a[2] = Integer.valueOf(sc.nextToken());
+        a[3] = Integer.valueOf(sc.nextToken());
+        
+        Arrays.sort(a);
+        int count = 0;
+        
+        for(int a1: a) 
+        	count = (a1 == 90) ? count+1: count;
+        
+        if(a[0] == a[1]) {
+        	if(a[2] == a[3]) flag = true;
+        }else if(a[1] == a[2]){
+        	if(a[0] == a[3]) flag = true;
+        }
+        
+        if(flag){
+        	pw.println("isosceles");
+        }else if(count == 2) {
+        	pw.println("right");
+        }else {
+        	pw.println("none of the previous");
+        }
+        pw.close();
+    }
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;SubSum&apos; to &apos;CaribbeanContest13/src&apos;&#x0D;&#x0A;- Original project: &apos;SubSum&apos;&#x0D;&#x0A;- Destination element: &apos;CaribbeanContest13/src&apos;&#x0D;&#x0A;- Original element: &apos;SubSum/src/SubSum&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=CaribbeanContest13/src" element1="/src&lt;SubSum" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1560804455020" version="1.0"/>
+</session>

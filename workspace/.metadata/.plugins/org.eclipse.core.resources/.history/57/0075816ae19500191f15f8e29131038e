@@ -1,0 +1,114 @@
+/**
+ * 
+ */
+package castingSpells;
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/**
+ * @author Andres Martinez
+ *
+ * Uva 1470
+ */
+
+public class CastingSpells {
+
+	static BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    static PrintWriter sc = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+    static StringTokenizer in;
+    static int c;
+
+	public static void main(String[] args) throws IOException{
+
+		String s;
+		int Z;
+		
+		Z = Integer.valueOf(bf.readLine());
+		
+		
+		for(int i = 0; i < Z; i++) {
+			Node trie = new Node(0);
+			s = bf.readLine();
+			buildTrie(trie, s);
+			c = 0;
+			
+			for(int j = 0; j < s.length(); j++) {
+				sc.println(reverse(s, j)); 
+				c = Math.max(c, buildTrie(trie, reverse(s, j)));
+				sc.println(c);
+			}
+			sc.println(c);
+			 
+		}
+		sc.close();	
+	}
+	
+	public static String reverse(String s, int j) {
+		
+		String reverseS = "";
+		for(int i = s.length()-1; i >= j; i--) {
+			reverseS += s.charAt(i)+"";
+		}
+		return reverseS;
+	}
+
+    private static int buildTrie(Node trie, String s) {
+
+    	Node currentTrie = trie;
+    	
+        for(int i = 0; i < s.length(); i++)  {
+//        	System.out.println(currentTrie);
+            if (currentTrie.links[s.charAt(i) - 'a'] == null) { //if letter is empty stores this letter in current trie.
+                Node n = new Node(s.charAt(0) - 'a'); 
+                currentTrie = currentTrie.links[s.charAt(i) - 'a'] = n; //update current to last letter.
+                
+            } else {
+            	c++;
+                currentTrie = currentTrie.links[s.charAt(i) - 'a']; //use current letter.
+            }
+        }
+        
+        currentTrie.end = true;
+//        System.out.println(currentTrie);
+        return c;
+    }
+
+    //Base Node of a Trie 
+    static class Node {
+       
+    	int id; //indicates symbol in this case letter
+        boolean end; //indicates end of a String given
+        Node[] links;
+        
+        public Node(int id) {
+            this.id = id;
+            end = false;
+            this.links = new Node[27]; //27 in this case because is implemented for letters
+        }
+        
+        
+        public String toString() {
+        	return "Id:"+id+", links: "+toLinks()+", end: "+end;
+        }
+        
+        public String toLinks() {
+        	String linksToString = "\n{ ";
+        	
+        	for (int i = 0; i < links.length; i++) {
+        		if(links[i] != null) {
+        		if(i != links.length-1) linksToString += (char)('A'+i)+" "+links[i]+", ";
+        		else linksToString += links[i];
+        		}
+			}
+        	
+        	linksToString += " }\n";
+        	
+        	return linksToString;
+        }
+
+    }
+}
+
+

@@ -1,0 +1,65 @@
+/**
+ * 
+ */
+package pieceFactory;
+
+import java.io.*;
+import java.util.*;
+
+/**
+ * @author Andres Martinez
+ *
+ */
+public class PieceFactory {
+
+	static BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+	static PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+	static StringTokenizer sc;
+	static Hashtable<String, Integer> pieces = new Hashtable<>();
+	static Hashtable<String, String> piecesC = new Hashtable<>();
+	 
+	public static void main(String[] args) throws IOException{
+		
+		int N = Integer.valueOf(bf.readLine()), value;
+		String compoundMsg = "", s, key, Fkey;
+		
+		for(int i = 0; i < N; ++i) {
+			sc = new StringTokenizer(bf.readLine());
+			pieces.put(sc.nextToken(), Integer.valueOf(sc.nextToken()));
+			
+		}
+	  
+		while((s = bf.readLine()) != null) {
+			if(s.equals("0")) break; 
+			key = s.split(" ")[0];
+			if(pieces.containsKey(key)) {
+				piecesC.replace(key, pieces.get(key) + ":" + s);
+			}else {
+				piecesC.put(key, s);
+				compoundMsg += key+" ";
+			}
+		}
+		
+		System.out.println(piecesC);
+		
+		sc = new StringTokenizer(compoundMsg.trim());
+		
+		while(sc.hasMoreTokens()) {
+			key = sc.nextToken();
+			
+			pw.println(key+" "+pieces.get(key));
+			
+			
+			
+			
+			
+		}
+		
+		
+		pw.close();
+	}
+	
+	
+}
+
+

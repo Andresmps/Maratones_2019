@@ -1,0 +1,24 @@
+20:56:25 **** Incremental Build of configuration Release for project Ejemplocpp ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/maraton/Java/jre1.8.0_172/bin/server;C:/maraton/Java/jre1.8.0_172/bin;C:/maraton/Java/jre1.8.0_172/lib/amd64;C:\maraton\eclipse-CDT;C:\maraton\MinGW\bin]
+20:57:42 **** Incremental Build of configuration Release for project Ejemplocpp ****
+make all 
+Building file: ../src/Ejemplocpp.cpp
+Invoking: Cross G++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Ejemplocpp.d" -MT"src/Ejemplocpp.o" -o "src/Ejemplocpp.o" "../src/Ejemplocpp.cpp"
+Finished building: ../src/Ejemplocpp.cpp
+ 
+Building target: Ejemplocpp
+Invoking: Cross G++ Linker
+g++  -o "Ejemplocpp"  ./src/Ejemplocpp.o   
+Finished building target: Ejemplocpp
+ 
+21:02:30 **** Incremental Build of configuration Release for project Ejemplocpp ****
+make all 
+make: Nothing to be done for `all'.
+21:02:57 **** Incremental Build of configuration Release for project Ejemplocpp ****
+make all 
+make: Nothing to be done for `all'.

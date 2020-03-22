@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package castingSpells;
+
+/**
+ * @author Andres Martinez
+ *
+ */
+public class CastingSpells {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

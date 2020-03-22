@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;playingdartsByDistance&apos; to &apos;playingDartsByDistance&apos;&#x0D;&#x0A;- Original project: &apos;Uri&apos;&#x0D;&#x0A;- Original element: &apos;Uri/src/playingdartsByDistance&apos;&#x0D;&#x0A;- Renamed element: &apos;Uri/src/playingDartsByDistance&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings&#x0D;&#x0A;- Rename subpackages of the package" description="Rename package &apos;playingdartsByDistance&apos;" flags="589830" hierarchical="true" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;playingdartsByDistance" name="playingDartsByDistance" qualified="false" references="true" stamp="1576963054130" textual="false" version="1.0"/>
+</session>

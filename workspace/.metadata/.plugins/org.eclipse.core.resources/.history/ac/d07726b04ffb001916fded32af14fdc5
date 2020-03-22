@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package aPlusb;
+
+import java.io.*;
+import java.util.*;
+
+/**
+ *
+ * @author Andrés Martínez
+ */
+public class Main {
+
+    static BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    static PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+    static StringTokenizer sc;
+    
+    public static void main(String[] args) throws IOException{
+        
+    	int bitCount, n;
+    	
+    	System.out.println(Integer.MAX_VALUE >= Math.pow(2, 31)-1);
+    	int b = (int)Math.pow(2, 31)-1;
+    	
+    	System.out.println(b);
+    	System.out.println(b+1);
+    	System.out.println(b+2);
+        while(true) {
+        	
+        	n = Integer.valueOf(bf.readLine());
+        	if(n == 0) break;
+        	
+        	bitCount = Integer.bitCount(n);
+        	
+        	
+            pw.println("The parity of "+ Integer.toBinaryString(n) +" is "+bitCount+" (mod 2).");
+            
+        }
+        
+        
+        
+        pw.close();
+    }
+}
